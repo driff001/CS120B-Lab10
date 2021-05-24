@@ -1,7 +1,7 @@
-/*	Author: dylan
+/*	Author: Dylan Riffel
  *  	Partner(s) Name: 
  *	Lab Section:
- *	Assignment: Lab #  Exercise #
+ *	Assignment: Lab 10 Exercise 1
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -179,10 +179,10 @@ int displaySMTick(int state){
 	return state;
 }
 
-enum KP_STATES { KP_Wait, KP_Press} KP_STATE;
+enum KP_STATES { KP_Wait, KP_Press};
 
-int KeyPress(){
-switch(KP_STATE){
+int KeyPress(int state){
+switch(state){
 	case KP_Wait:
 
 	if ( 255 - PINC > 0) {
@@ -204,7 +204,7 @@ switch(KP_STATE){
         }
         break;
 }
-switch(KP_STATE){
+switch(state){
 	case KP_Wait:
 	PORTB = 0;
 	break;
@@ -212,7 +212,7 @@ switch(KP_STATE){
 	PORTB = 0b10000000;	
 	break;
 }
-return KP_STATE;
+return state;
 }
 
 
@@ -287,7 +287,6 @@ int main(void) {
 		}
 		tasks[i]->elapsedTime += GCD ;
 	}
-	KeyPress();
 
 
     while(!TimerFlag);
