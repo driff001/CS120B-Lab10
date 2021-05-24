@@ -369,16 +369,6 @@ int main(void) {
 
     /* Insert your solution below */
     while (1) {
-	x = GetKeypadKey();
-
-	switch(x){
-
-        case '5': PORTB = 0x01;break;
-        default: PORTB = 0x00; break;
-        }
-
-
-
 
 	for ( i = 0; i < numTasks; i++){
 		if(tasks[i]->elapsedTime == tasks[i]->period){
@@ -387,9 +377,6 @@ int main(void) {
 		}
 		tasks[i]->elapsedTime += GCD ;
 	}
-	KeyPress();
-
- 
 
 	
 
