@@ -4,6 +4,8 @@
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
  *
+ *	Video Link: https://www.youtube.com/watch?v=Ij0fPNx_lrA
+ *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  */
@@ -181,10 +183,10 @@ int displaySMTick(int state){
 
 unsigned int x;
 
-enum KP_STATES { KP_Wait,KP_Start, KP_Press,KP_Press2,KP_Press3,KP_Press4,KP_End} KP_STATE;
+enum KP_STATES { KP_Wait,KP_Start, KP_Press,KP_Press2,KP_Press3,KP_Press4,KP_End} ;
 
-int KeyPress(){
-switch(KP_STATE){
+int KeyPress(int state){
+switch(state){
 	case KP_Wait:
 	x = GetKeypadKey();
 	if ( x == '#') {
@@ -273,7 +275,7 @@ switch(KP_STATE){
 	break;
 }
 
-switch(KP_STATE){
+switch(state){
 
 case KP_Wait:
 break;	
@@ -298,7 +300,7 @@ PORTB = 0b01;
 break;
 
 }
-return KP_STATE;
+return state;
 }
 
 
