@@ -1,7 +1,7 @@
-/*	Author: dylan
+/*	Author: Dylan Riffel
  *  	Partner(s) Name: 
  *	Lab Section:
- *	Assignment: Lab #  Exercise #
+ *	Assignment: Lab 10  Exercise 2
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	Video Link: https://www.youtube.com/watch?v=Ij0fPNx_lrA
